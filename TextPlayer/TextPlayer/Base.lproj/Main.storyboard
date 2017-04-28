@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="输入你想要朗读的文字" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Lb-XH-PSk">
+                                <rect key="frame" x="52" y="92" width="271" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="M88-OM-Epz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZf-n2-cy7">
+                                <rect key="frame" x="52" y="255" width="31" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="播放">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ful-qJ-bK8">
+                                <rect key="frame" x="114" y="255" width="31" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="暂停"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-Mx-cU1">
+                                <rect key="frame" x="176" y="255" width="31" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="停止">
+                                    <color key="titleColor" red="1" green="0.036703699569999998" blue="0.040325256480000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="语速" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bec-RX-TUl">
+                                <rect key="frame" x="328" y="331" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onY-4N-9g4">
+                                <rect key="frame" x="328" y="415" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrW-uX-qTB">
+                                <rect key="frame" x="238" y="255" width="31" height="30"/>
+                                <color key="backgroundColor" red="0.9325565696" green="0.95679515599999998" blue="0.96926063299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="继续"/>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="mKf-yz-ZfU">
+                                <rect key="frame" x="54" y="410" width="275" height="31"/>
+                                <connections>
+                                    <action selector="volumeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="XE8-ox-pKn"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Ghf-9G-1eK">
+                                <rect key="frame" x="50" y="326" width="275" height="31"/>
+                                <connections>
+                                    <action selector="rateSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="lPY-Cn-wjo"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.66666666669999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Lb-XH-PSk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="52" id="0lK-tC-y9O"/>
+                            <constraint firstItem="mKf-yz-ZfU" firstAttribute="top" secondItem="Ghf-9G-1eK" secondAttribute="bottom" constant="54" id="3lZ-ZW-YIh"/>
+                            <constraint firstItem="JZf-n2-cy7" firstAttribute="top" secondItem="9Lb-XH-PSk" secondAttribute="bottom" constant="35" id="3n3-mk-WSG"/>
+                            <constraint firstItem="9Lb-XH-PSk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9EC-Bs-pNy"/>
+                            <constraint firstItem="Ghf-9G-1eK" firstAttribute="leading" secondItem="9Lb-XH-PSk" secondAttribute="leading" id="CsJ-jq-qje"/>
+                            <constraint firstItem="ful-qJ-bK8" firstAttribute="leading" secondItem="JZf-n2-cy7" secondAttribute="trailing" constant="31" id="EYa-Nx-77F"/>
+                            <constraint firstItem="Ghf-9G-1eK" firstAttribute="width" secondItem="9Lb-XH-PSk" secondAttribute="width" id="JZN-mT-Wzv"/>
+                            <constraint firstItem="onY-4N-9g4" firstAttribute="centerY" secondItem="mKf-yz-ZfU" secondAttribute="centerY" id="KvK-NG-1RI"/>
+                            <constraint firstItem="hnh-Mx-cU1" firstAttribute="centerY" secondItem="ful-qJ-bK8" secondAttribute="centerY" id="Lvj-R7-XiE"/>
+                            <constraint firstItem="9Lb-XH-PSk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="72" id="Np6-Ii-zJw"/>
+                            <constraint firstAttribute="trailing" secondItem="9Lb-XH-PSk" secondAttribute="trailing" constant="52" id="OZM-wn-XRk"/>
+                            <constraint firstItem="LrW-uX-qTB" firstAttribute="leading" secondItem="hnh-Mx-cU1" secondAttribute="trailing" constant="31" id="QG8-Gx-vSG"/>
+                            <constraint firstItem="bec-RX-TUl" firstAttribute="leading" secondItem="Ghf-9G-1eK" secondAttribute="trailing" constant="5" id="YkU-ra-Z34"/>
+                            <constraint firstItem="JZf-n2-cy7" firstAttribute="leading" secondItem="9Lb-XH-PSk" secondAttribute="leading" id="ZEZ-pc-jOh"/>
+                            <constraint firstItem="Ghf-9G-1eK" firstAttribute="top" secondItem="hnh-Mx-cU1" secondAttribute="bottom" constant="41" id="ace-Az-Q9K"/>
+                            <constraint firstItem="mKf-yz-ZfU" firstAttribute="leading" secondItem="Ghf-9G-1eK" secondAttribute="leading" id="b7z-SO-N8b"/>
+                            <constraint firstItem="ful-qJ-bK8" firstAttribute="centerY" secondItem="JZf-n2-cy7" secondAttribute="centerY" id="bHL-5s-pPC"/>
+                            <constraint firstItem="bec-RX-TUl" firstAttribute="centerY" secondItem="Ghf-9G-1eK" secondAttribute="centerY" id="c5g-pp-j37"/>
+                            <constraint firstItem="onY-4N-9g4" firstAttribute="leading" secondItem="mKf-yz-ZfU" secondAttribute="trailing" constant="5" id="ctn-27-SB8"/>
+                            <constraint firstItem="LrW-uX-qTB" firstAttribute="centerY" secondItem="hnh-Mx-cU1" secondAttribute="centerY" id="rRx-31-4oQ"/>
+                            <constraint firstItem="mKf-yz-ZfU" firstAttribute="trailing" secondItem="Ghf-9G-1eK" secondAttribute="trailing" id="roQ-eq-pQy"/>
+                            <constraint firstItem="hnh-Mx-cU1" firstAttribute="leading" secondItem="ful-qJ-bK8" secondAttribute="trailing" constant="31" id="wFl-qD-MT2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continueSpeakingBtn" destination="LrW-uX-qTB" id="gxy-7t-OvJ"/>
+                        <outlet property="playerBtn" destination="JZf-n2-cy7" id="pFN-5y-lE1"/>
+                        <outlet property="rateSlider" destination="Ghf-9G-1eK" id="KaZ-SV-WiZ"/>
+                        <outlet property="stopBtn" destination="hnh-Mx-cU1" id="8jO-WF-wqN"/>
+                        <outlet property="suspendBtn" destination="ful-qJ-bK8" id="d6a-SC-o8D"/>
+                        <outlet property="testTextView" destination="9Lb-XH-PSk" id="fB4-R0-7Cj"/>
+                        <outlet property="volumeSlider" destination="mKf-yz-ZfU" id="7Jc-A3-ypr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
