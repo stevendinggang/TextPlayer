@@ -1,4 +1,4 @@
-# TextPlayer
+# TextPlayer iOS文字转语音播放器
 
 主要使用了AVFoundation/AVFoundation 系统库来实现语音播报
 AVSpeechSynthesizer
